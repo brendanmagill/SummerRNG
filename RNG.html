@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+      background-image: url('RNGzus.jpg');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <div style = "position:absolute; left:300px; top:400px">
+      <button onclick="card()">Random Card</button>
+    </div>
+    <script type="text/javascript">
+      function card(){
+        var suit_id = Math.floor(4*Math.random()) + 1
+        var suit = ""
+        if (suit_id == 1){
+          suit = "Hearts"
+        }
+        else if (suit_id == 2) {
+          suit  = "Spades"
+        }
+        else if (suit_id == 3) {
+          suit = "Diamonds"
+        }
+        else {
+          suit = "Clubs"
+        }
+        var card_id = Math.floor(13*Math.random()) + 1
+        var card = ""
+        if (card_id == 1){
+          card = "Ace"
+        }
+        else if (card_id == 11) {
+          card = "Jack"
+        }
+        else if (card_id == 12) {
+          card = "Queen"
+        }
+        else if (card_id == 13) {
+          card = "King"
+        }
+        else {
+          card = "" + card_id
+        }
+        var card_out = card + " " + "of" + " " + suit
+        window.alert(card_out)
+      }
+    </script>
+    <div style = "position:absolute; left:900px; top:400px">
+      <button onclick="dice()">Roll Dice</button>
+    </div>
+    <script type="text/javascript">
+      function dice(){
+        var die_1 = Math.floor(6*Math.random()) + 1
+        var die_2 = Math.floor(6*Math.random()) + 1
+        var total = die_1 + die_2
+        var tot_str = "" + total
+        var out = "You rolled a " + total
+        window.alert(out)
+      }
+    </script>
+
+  </body>
+
+
+</html>
